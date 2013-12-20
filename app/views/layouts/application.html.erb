@@ -9,8 +9,7 @@
 <body>
 	<p class="notice" style="color: #F08080; font-weight: bold; text-align: center;"><%= notice %></p>
 	<p class="alert"  style="color: #6B8E23; font-weight: bold; text-align: center;"><%= alert %></p>
-	<div id="user_nav">
-		
+	<div id="user_nav">		
 		<% if user_signed_in? %>
 			Logged in as <strong><%= current_user.email%></strong>
 			<%= link_to 'Edit Profile', edit_user_registration_path%> |
@@ -20,7 +19,6 @@
 			<%= link_to 'Login', new_user_session_path%>	
 		<% end %>	
 	</div>
-
 <%= yield %>
 
 </body>
