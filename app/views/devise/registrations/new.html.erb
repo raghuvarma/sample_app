@@ -16,8 +16,7 @@
   <%= f.password_field :password_confirmation %></div>
   
   <div class="role">
-  	<p><%= f.label :admin %>: <%= f.check_box :admin %></p>
-  	<p><%= f.label :client %>: <%= f.check_box :client %></p>
+  	<p><%= f.label :admin %>: <%= f.check_box :admin %> &nbsp; <%= f.label :client %>: <%= f.check_box :client %></p>
   </div>
 
   <div><%= f.submit "Sign up" %></div>
