@@ -13,6 +13,7 @@
   <tr>
     <td><%= post.name %></td>
     <td><%= post.content %></td>
+    <td><%= image_tag post.image_url.to_s %></td>
     <td><%= link_to 'Show', post %></td>
     <td><%= link_to 'Edit', edit_post_path(post) %></td>
     <% if current_user.try(:admin?) %>
