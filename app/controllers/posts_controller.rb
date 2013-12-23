@@ -1,7 +1,8 @@
 class PostsController < ApplicationController
-  before_filter :authenticate_user!, :only => [:edit, :update]
+  #before_filter :authenticate_user!, :only => [:edit, :update]
   # GET /posts
   # GET /posts.json
+  load_and_authorize_resource
   def index
     @posts = Post.all
 
@@ -36,6 +37,7 @@ class PostsController < ApplicationController
   # GET /posts/1/edit
   def edit
     @post = Post.find(params[:id])
+    unauthorized! if cannot? :edit, @post
   end
 
   # POST /posts

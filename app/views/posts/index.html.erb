@@ -14,10 +14,12 @@
     <td><%= post.name %></td>
     <td><%= post.content %></td>
     <td><%= link_to 'Show', post %></td>
+    <% if can? :update, @post %>
     <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <% if current_user.try(:admin?) %>
+    <% end %>
+    <% #if current_user.try(:admin?) %>
+    <% if can? :delete, @post %>
     <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    <% else %>
     <% end %>
   </tr>
 <% end %>
