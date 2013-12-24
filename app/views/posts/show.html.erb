@@ -9,6 +9,10 @@
   <b>Content:</b>
   <%= @post.content %>
 </p>
+<p>
+  <b>Image:</b>
+	<%= image_tag @post.image_url(:thumb).to_s  %>
+</p>
 
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
