@@ -20,6 +20,8 @@ gem "twitter-bootstrap-rails", "~> 2.2.8"
 
 gem 'cancan'
 
+gem 'recaptcha', :require => 'recaptcha/rails'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

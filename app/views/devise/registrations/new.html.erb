@@ -20,7 +20,9 @@
   	<span>Roles</span><br />
   	<%= f.collection_select :role, User::ROLES, :to_s, :humanize %> 
   </div><br />
-  
+  <div>
+  	<p><%= recaptcha_tags %></p>
+  </div>
 
   <div class="btn_submit" style=" margin: 0 auto; text-align: center;"><%= f.submit "Sign up" %></div>
 <% end %>

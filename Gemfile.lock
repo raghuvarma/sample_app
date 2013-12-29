@@ -32,11 +32,11 @@ GEM
     atomic (1.1.14)
     bcrypt-ruby (3.1.2)
     builder (3.0.4)
+    cancan (1.6.10)
     carrierwave (0.9.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
       json (>= 1.7)
-    cancan (1.6.10)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -100,8 +100,9 @@ GEM
     rake (10.1.0)
     rdoc (3.12.2)
       json (~> 1.4)
-    rmagick (2.13.2)
+    recaptcha (0.3.5)
     ref (1.0.5)
+    rmagick (2.13.2)
     sass (3.2.13)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -143,13 +144,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  carrierwave
   cancan
+  carrierwave
   coffee-rails (~> 3.2.1)
   devise
   jquery-rails
   less-rails
   rails (= 3.2.14)
+  recaptcha
   rmagick (~> 2.13.1)
   sass-rails (~> 3.2.3)
   sqlite3
