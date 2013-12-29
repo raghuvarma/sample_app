@@ -18,6 +18,7 @@ gem "rmagick", "~> 2.13.1"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails", "~> 2.2.8"
 
+gem 'cancan'
 
 # Gems used only for assets and not required
 # in production environments by default.
