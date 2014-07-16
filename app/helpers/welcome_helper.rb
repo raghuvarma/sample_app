@@ -9,13 +9,13 @@ module WelcomeHelper
     content = "" # raw content of rss feed will be loaded here
     open(source) do |s| content = s.read end
     rss = RSS::Parser.parse(content, false)
-     
     html = "<ul>"
     rss.items.each do |i|
-    html << "<li><a href='#{i.link}'>#{i.title}</a></li>"
-    html << "</ul>"
-    html
-     
+      html << "<li><p>#{i.title}</p></li>"
+      html << "<li><p>#{i.description}</p></li>"
     end
+    html << "</ul>"
+    html.html_safe
+
   end
 end
