@@ -1,11 +1,14 @@
 SampleApp::Application.routes.draw do
+  resources :articles
+
+
   devise_for :clients
 
   devise_for :admins
 
   get "welcome/index"
 
-  devise_for :users, path_names:{sign_in:"login", sign_out: "logout"}
+  devise_for :users, controllers: { registrations: 'registrations' }, path_names:{sign_in:"login", sign_out: "logout"}
 
   resources :posts
 
